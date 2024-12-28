@@ -1,0 +1,555 @@
+body {
+    font-family: 'Poppines', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:  linear-gradient(90deg, #1c1c1c, #6220fb);
+    padding: 1rem 2rem;
+}
+
+.logo h2 {
+    color:#527dbf;
+    font-size:24px;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #205d9d96;
+    border-radius: 4px;
+}
+
+.menu-toggle span{
+    background: white;
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+}
+
+/*Search Bar Style Inside Navbar*/
+nav ul li input text[type="text"] {
+    padding: 30px;
+    font-size: 16px;
+    border: 10px solid #ccc;
+    border-radius: 15px;
+    width: 200px;
+}
+
+nav ul li input[type="text"]:focus{
+    outline:none;
+    border-color:#1f57b7;
+}
+
+#project-list {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#project-list{
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/*mobile responsive*/
+
+@media (max-width: 768px){
+    
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #333;
+    }
+    
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+    
+    .menu-toggle{
+        display: flex;
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
+}
+
+.searchBox {
+    display: flex;
+    max-width: 230px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    background: #2f3640;
+    border-radius: 50px;
+    position: relative;
+  }
+  
+  .searchButton {
+    color: white;
+    position: absolute;
+    right: 8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+    border: 0;
+    display: inline-block;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  }
+  /*hover effect*/
+  button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 20px;
+    transform: translateY(-3px);
+  }
+  /*button pressing effect*/
+  button:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+  .searchInput {
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    padding: 24px 46px 24px 26px;
+  }
+
+
+h1, h2 {
+    font-weight: 700;
+}
+
+p{
+    font-weight: 400;
+}
+
+a {
+    color: #266dd8;
+    text-decoration: none;
+}
+
+a:hover {
+        color: #0693f8;
+        text-decoration: underline;
+}
+
+
+
+
+header {
+    background: linear-gradient(-45deg,#488aed, #8c9fc6, #1f57b7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: gradient 15s ease infinite;
+    padding: 5px 0;
+    text-align: center;
+}
+
+#cursor{
+    position: fixed;
+    top:calc(var(--cursor-size)*-0.5);
+    left:calc(var(--cursor-size)*-0.5);
+    mix-blend-mode:difference;
+    filter:url(#goo);
+}
+
+.cursor-circle{
+    position:absolute;
+    top:0;
+    left:0;
+    width:var(--cursor-size);
+    height:var(--cursor-size);
+    border-radius:var(--cursor-size);
+    transform-origin:center center;
+}
+
+
+.container{
+    width: 500px; height: 200px;
+    border: 2px solid #ecf0f1;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 157px 65px
+    rgba(72,138,237,0.66);
+    -moz-box-shadow: 0px 0px 157px 65px
+    rgba(72,138,237,0.66);
+    box-shadow: 0px 0px 157px 65px
+    rgba(72,138,237,0.66);
+    object-fit: cover;
+    transition: 1s ease;
+    filter: grayscale(0%)
+}
+
+img:hover{
+    transform: scale(1.4);
+    filter: grayscale(100%);
+}
+
+
+.btn-box {background: linear-gradient(-45deg,#488aed, #8c9fc6, #1f57b7);
+    color: #fff;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    animation: bounce is infinte alternate; /* Apply bounce animation*/
+}
+
+.btn-box:hover {
+    background: #444b55;
+    cursor: pointer;
+         transition: all .3s ease-in;
+         padding-right: 30px;
+         padding-left:  30px;
+}
+
+.btn-box-insta {background: linear-gradient(-45deg,#af3feb,#c90808, #e7139d, #e48f3f);
+    color: #fff;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-box-insta:hover {
+    background: #444b55;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    padding-right: 30px;
+    padding-left:  30px;
+} 
+
+.btn-box-face{background: linear-gradient(-45deg, #0c5386,#077fdb, #68a0e0);
+    color: #fff;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-box-face:hover {
+    background: #444b55;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    padding-right: 30px;
+    padding-left:  30px;
+} 
+
+.btn-box-git{background: linear-gradient(-45deg, #2609b4,#6445ca, #282b2f);
+    color: #fff;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-box-git:hover {
+    background: #444b55;
+    cursor: pointer;
+    transition: all .3s ease-in;
+    padding-right: 30px;
+    padding-left:  30px;
+} 
+    
+.btn-box-ytb{background: linear-gradient(-45deg, #c20808ba,#c74360d6, #d31a1a);
+  color: #fff;
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-box-ytb:hover {
+  background: #444b55;
+  cursor: pointer;
+  transition: all .3s ease-in;
+  padding-right: 30px;
+  padding-left:  30px;
+} 
+
+form
+    {
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 20px;
+        border:8px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        box-sizing: border-box;
+    }
+
+.form-group {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        margin-bottom: 15px;
+    }
+
+.form-group label {
+        margin-bottom: 5px;
+    }
+
+form input[type="text"], form input[type= "email"], form textarea, form button {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        border-color:  rgb(75, 116, 213);
+    }
+
+
+    form button {
+           border-radius: 25rem;
+           text-transform: uppercase;
+           font-style: normal;
+           font-weight: 400;
+           font: 400;
+           padding-left: 25px;
+           padding-right: 25px;
+           color: #fff;
+           -webkit-clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+           clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px) 100%,15px 100%,0 100%);
+           height: 40px;
+           font-size: 0.5rem;
+           line-height: 14px;
+           letter-spacing: 1.2px;
+           transition: .2s .1s;
+           background-image: linear-gradient(90deg, #1c1c1c, #6220fb);
+           border: 0 solid;
+           overflow: hidden;
+}
+
+
+    form button:hover {
+            cursor: pointer;
+            transition: all .3s ease-in;
+            padding-right: 30px;
+            padding-left:  30px;
+            background: linear-gradient(-45deg, #0c5386,#077fdb, #68a0e0);
+            
+    }
+
+     /* On Hover Effects */
+.container, form input:hover{
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+  transform: translateY(-5px);
+}
+
+
+    footer 
+            {
+            background: linear-gradient(-45deg,#488aed, #8c9fc6, #1f57b7);
+            a {
+                color: #182533;
+                text-decoration: none;
+            }
+            
+            a:hover {
+                    color: #0470fd;
+                    text-decoration: underline;
+            }
+            }
+
+   
+
+    .container {
+        text-align: center;
+        padding: 20px;
+    }
+
+    
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73C0FC;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8;
+    transition: .4s;
+  }
+  
+  .sun svg {
+    position: absolute;
+    top: 6px;
+    left: 36px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .moon svg {
+    fill: #73C0FC;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* .switch:hover */.sun svg {
+    animation: rotate 15s linear infinite;
+  }
+  
+  @keyframes rotate {
+   
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* .switch:hover */.moon svg {
+    animation: tilt 5s linear infinite;
+  }
+  
+  @keyframes tilt {
+   
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(-10deg);
+    }
+  
+    75% {
+      transform: rotate(10deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .input:checked + .slider {
+    background-color: #183153;
+  }
+  
+  .input:focus + .slider {
+    box-shadow: 0 0 1px #183153;
+  }
+  
+  .input:checked + .slider:before {
+    transform: translateX(30px);
+  }
+
+
+/* Light mode (default) styling */
+body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  /* Other elements that you want to switch to dark mode can be targeted here */
+ 
+
+    /* Dark Mode Adjustments */
+.dark-mode .navbar {
+    background-color: #333;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .nav-menu a, .dark-mode .nav-menu .resume-button {
+    color: #fff;
+}
+
+.dark-mode .nav-menu a:hover, .dark-mode .nav-menu , .resume-button {
+    background-color: rgba(255, 255, 255, 0.1)
+}
